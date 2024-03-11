@@ -1,1 +1,50 @@
 /* You can add global styles to this file, and also import other style files */
+
+
+
+.black-text {
+    color: black !important; 
+  }
+  .flex {
+    display: flex;
+    align-items: center; 
+  }
+  
+  .flex li {
+    margin-right: 20px; 
+  }
+  .car-image {
+    width: 100%; 
+    height: auto; 
+    max-height: 150px; 
+  }
+
+  body {
+    display: flex;
+    
+    height: 100%;
+    flex-direction: column;
+    margin: 0;
+    position: relative;
+    padding-bottom:200px;
+  }
+
+  
+  footer {
+    position: absolute;
+    clear:both;
+    height: auto;
+    width: 100%;
+    bottom:0;
+  }
+
+
+
+  .motor-logo{
+
+    width: 30%;
+    height: auto; 
+    max-height: 75px; 
+  }
+
+  

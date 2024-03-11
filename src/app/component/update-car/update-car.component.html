@@ -1,0 +1,70 @@
+<div class="container">
+    <div class="card-panel">
+        <div class="input-field col s12">
+            <input  id="model" type="text" [(ngModel)]="model">
+            <label for="disabled">Model</label>
+          </div>
+          <div class="input-field col s12">
+            <input  id="mark" type="text" [(ngModel)]="mark">
+            <label >Marque :</label>
+          </div>
+          <div class="input-field col s12">
+            <input  id="engineType" type="text" [(ngModel)]="engineType">
+            <label >Moteur :</label>
+          </div>
+          <div class="input-field col s12">
+            <input  id="energie" type="text" [(ngModel)]="energie">
+            <label >Energie :</label>
+          </div>
+          <div class="input-field col s12">
+            <input  id="numberOfValves" type="number" [(ngModel)]="numberOfValves">
+            <label >Nombre de soupapes :</label>
+          </div>
+          <div class="input-field col s12">
+            <input  id="cylinder" type="number" [(ngModel)]="cylinder">
+            <label >Cylindrée :</label>
+          </div>
+          <div class="input-field col s12">
+            <input  id="power" type="number" [(ngModel)]="power">
+            <label >Puissance DIN :</label>
+          </div>
+          <div class="input-field col s12">
+            <input  id="length" type="number" [(ngModel)]="length">
+            <label >Longueur :</label>
+          </div>
+          <div class="input-field col s12">
+            <input  id="width" type="number" [(ngModel)]="width">
+            <label >Largeur :</label>
+          </div>
+          <div class="input-field col s12">
+            <input  id="height" type="number" [(ngModel)]="height">
+            <label >Hauteur :</label>
+          </div>
+          <div class="input-field col s12">
+            <input  id="weight" type="number" [(ngModel)]="weight">
+            <label >Poids :</label>
+          </div>
+          <div class="input-field col s12">
+            <input  id="maxSpeed" type="number" [(ngModel)]="maxSpeed">
+            <label >Vitesse max :</label>
+          </div>
+          <div class="input-field col s12">
+            <input  id="year" type="number" [(ngModel)]="year">
+            <label >Année :</label>
+          </div>
+          <div class="input-field col s12">
+            <input  id="price" type="number" [(ngModel)]="price">
+            <label for="disabled">Prix :</label>
+          </div>
+          <div class="input-field col s12">
+            <input  id="picture" type="text" [(ngModel)]="picture">
+            <label >Photo :</label>
+          </div>
+          <div class="input-field col s12">
+            <input  id="note" type="number" [(ngModel)]="note">
+            <label >Note sur 10:</label>
+          </div>
+    </div>
+    <button class="btn waves-effect waves-orange orange" (click)="editCar()"> Mettre à jour !<i class="material-icons">build</i></button>
+</div>
+<button class="btn waves-effect waves-orange red" routerLink="/cars"> Retour </button>

@@ -1,0 +1,89 @@
+<div *ngIf="car" class="row">
+    <div class="col s12 m8 offset-m2">
+    <h2 class="header center">{{ car.model }}</h2>
+    <div class="card horizontal hoverable">
+      <div class="card-image">
+        <img [src]="car.picture">
+      </div>
+      <div class="card-stacked">
+        <div class="card-content">
+          <table class="bordered striped">
+            <tbody>
+              <tr>
+                <td>Marque</td>
+                <td><strong>{{ car.mark }}</strong></td>
+              </tr>
+              <tr>
+                <td>Moteur</td>
+                <td><strong>{{ car.engineType }}</strong></td>
+              </tr>
+              <tr>
+                <td>Energie</td>
+                <td>
+                  <span >{{car.energie}}</span>
+                </td>
+              </tr>
+              <tr>
+                <td>Soupapes</td>
+                <td>
+                  <span >{{car.numberOfValves}}</span>
+                </td>
+              </tr>
+              <tr>
+                <td>Cylindrée</td>
+                <td>
+                  <span >{{car.cylinder}} cc</span>
+                </td>
+              </tr>
+              <tr>
+                <td>Puissance DIN</td>
+                <td>
+                  <span >{{car.power}} chevaux</span>
+                </td>
+              </tr>
+              <tr>
+                <td>Vitesse Max</td>
+                <td>
+                  <span >{{car.maxSpeed}} km/h</span>
+                </td>
+              </tr>
+              <tr>
+                <td>Prix</td>
+                <td>
+                  <span >{{car.price}} €</span>
+                </td>
+              </tr>
+              <tr>
+                <td>Année</td>
+                <td><em>{{ car.year }}</em></td>
+              </tr>
+              <tr>
+                <td>Dimensions</td>
+                <td><em>{{ car.length }} x {{car.width}} x {{car.height}} cm</em></td>
+              </tr>
+              <tr>
+                <tr>
+                  <td>Note</td>
+                  <td ><em [style.color]="getNoteColorClass(car.note)">{{ car.note }} /10</em></td>
+                </tr>
+                <tr>
+                <tr>
+                <td><button (click)="deleteCarById(car.id)"> <i class="Small material-icons" title="Supprimer">delete</i></button></td>
+                <td><button (click)="updateCar()"> <i class="Small material-icons" title="Modifier">edit</i></button></td>
+                <td><button (click)="makeItFavorite()" title="Mettre en favorit"> 
+                  <i *ngIf="car.fav" class="material-icons yellow">star</i>
+                  <i *ngIf="!car.fav" class="material-icons">star_border</i>
+                </button></td>
+              </tr>
+            </tbody>
+          </table>
+          
+        </div>
+        <div class="card-action">
+          <a (click)="goToCars()">Retour</a>
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
+    <h4 *ngIf='!car' class="center">Aucune voiture à afficher !</h4>

@@ -1,0 +1,33 @@
+<main>
+<div class="container">
+    <div class="row">   
+        <div *ngFor="let car of favoritCarList" class="col m4 s6">
+            <div (click)="goToCar(car)" class="card horizontal"  carBorderCard>
+                <div class="card image">
+                    <img src="{{car.picture}}" class="car-image">
+                </div>
+                <div class="card-stacked">
+                    <div class="card-content">
+                        <p>
+                            {{car.model}}
+                        </p>
+                        <p>
+                            {{car.mark}}
+                        </p>
+                        <p>
+                            <small>
+                                {{car.year}}
+                            </small>
+                        </p>
+
+
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+</div>
+</main>
